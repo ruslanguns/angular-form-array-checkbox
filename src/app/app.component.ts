@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'my-app',
@@ -7,18 +7,18 @@ import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  name = 'Angular Form Array';
+  name = 'form with Checkbox';
   form: FormGroup;
 
   constructor(private fb: FormBuilder) {
     this.form = this.fb.group({
       username: ['', [Validators.required]],
-      roles: this.fb.array([])
+      roles: this.fb.group({
+        read: [''],
+        write: [''],
+        drop: ['']
+      })
     });
-  }
-
-  get roles() {
-    return this.form.get('roles') as FormArray;
   }
 
   onSubmit() {

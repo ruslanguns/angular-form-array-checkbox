@@ -8,24 +8,24 @@
   </label>
 
   <!-- TODO: make it dynamic from Form Array -->
-  <div class="form__input">
+  <div class="form__input" formGroupName="roles">
     Roles:
     <ul>
       <li>
         <label class="form__input">
-          <input id="read" name="read" type="checkbox" />
+          <input id="read" formControlName="read" type="checkbox" />
           Read
         </label>
       </li>
       <li>
         <label class="form__input">
-          <input id="write" name="write" type="checkbox" />
+          <input id="write" formControlName="write" type="checkbox" />
           Write
         </label>
       </li>
       <li>
         <label class="form__input">
-          <input id="delete" name="delete" type="checkbox" />
+          <input id="drop" formControlName="drop" type="checkbox" />
           Drop
         </label>
       </li>
