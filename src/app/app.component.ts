@@ -21,11 +21,12 @@ export class AppComponent {
     });
 
     this.form.patchValue({
+      // Initial state
       username: 'ruslanguns',
       roles: {
         read: true,
-        write: false,
-        drop: true
+        write: true,
+        drop: false
       }
     });
   }
