@@ -19,6 +19,15 @@ export class AppComponent {
         drop: ['']
       })
     });
+
+    this.form.patchValue({
+      username: 'ruslanguns',
+      roles: {
+        read: true,
+        write: false,
+        drop: true
+      }
+    });
   }
 
   onSubmit() {
