@@ -1,0 +1,35 @@
+<hello name="{{ name }}"></hello>
+
+<h3>User form</h3>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <label class="form__input">
+    Username:
+    <input type="text" formControlName="username" />
+  </label>
+  <div class="form__input">
+    Roles:
+    <ul>
+      <li>
+        <label class="form__input">
+          <input id="read" name="read" type="checkbox" />
+          Read
+        </label>
+      </li>
+      <li>
+        <label class="form__input">
+          <input id="write" name="write" type="checkbox" />
+          Write
+        </label>
+      </li>
+      <li>
+        <label class="form__input">
+          <input id="delete"  name="delete" type="checkbox" />
+          Drop
+        </label>
+      </li>
+    </ul>
+  </div>
+  <div class="form__actions">
+    <button type="submit">Submit</button>
+  </div>
+</form>

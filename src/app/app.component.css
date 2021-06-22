@@ -1,0 +1,48 @@
+.form__input {
+  display: block;
+  margin: 0.5em;
+}
+
+.form__input input[type='text'] {
+  margin-left: 1em;
+  height: 2em;
+  width: 200px;
+  color: black;
+}
+
+.form__input input[type='checkbox'] {
+  margin-left: 1.9em;
+}
+
+label {
+  user-select: none;
+  cursor: pointer;
+}
+
+.form__input > ul {
+  display: inline-flex;
+  gap: 1em;
+}
+
+.form__input > ul > li {
+  list-style: none;
+  display: inline-block;
+  margin-left: -1.6em;
+}
+
+.form__actions > button {
+  display: block;
+  padding: 1em 3em;
+  border: none;
+  width: 95%;
+  color: white;
+  background-color: rgb(140, 179, 62);
+  border-radius: 0.4rem;
+  margin: 0 auto;
+}
+
+.form__actions > button:hover {
+  filter: brightness(1.05);
+  cursor: pointer;
+  border: 0.5px solid rgb(58, 95, 58);
+}
